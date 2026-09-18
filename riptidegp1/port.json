@@ -1,0 +1,16 @@
+{
+  "attr": {
+    "arch": [
+      "aarch64"
+    ],
+    "min_glibc": "2.27",
+    "title": "Riptide GP1"
+  },
+  "items": [
+    "Riptide GP1.sh",
+    "riptidegp1/"
+  ],
+  "items_opt": [],
+  "name": "riptidegp1.zip",
+  "version": 4
+}

@@ -1,0 +1,95 @@
+{
+  "architecture": "aarch64",
+  "argument_mode": "none",
+  "enabled_quirks": [],
+  "executable": "riptidegp1-nextos",
+  "generation_runtime": [
+    {
+      "mode": "0755",
+      "path": "riptidegp1-nextos",
+      "role": "executable",
+      "sha256": "7c946bf4de878c11c08a1397b13d0dee6d44890fcaba758e1b4908c5c7ed6852"
+    },
+    {
+      "mode": "0644",
+      "path": "lib/libSDL3.so.0",
+      "role": "private-library",
+      "sha256": "82445879f4e44084ffcf81266eacec7b02f82b7e29376b7ed8a559bf2aa9c173"
+    },
+    {
+      "mode": "0644",
+      "path": "port-env.sh",
+      "role": "runtime-hook",
+      "sha256": "6cad6c80bcd3b414e4cf77297a7f7ea310b4ea1a8dba417dd3d9098f646901b4"
+    },
+    {
+      "mode": "0644",
+      "path": "extractor.json",
+      "role": "nxextract-recipe",
+      "sha256": "5e93738619555fe4fd5fdcc758fc1387d2ea97d62addd11ba8b0657f13cedb83"
+    },
+    {
+      "mode": "0644",
+      "path": "nxextract/nxextract.py",
+      "role": "nxextract-engine",
+      "sha256": "e59a1e525ea475635c2e8f51bff3c6fff8cdaad406c158e3dad011cdd96876a7"
+    },
+    {
+      "mode": "0644",
+      "path": "nxextract/run-extractor.sh",
+      "role": "nxextract-runner",
+      "sha256": "583d046d4d95a2d15d66f0aee35911097698b34b0bd33732b2a517e6408bf9d0"
+    },
+    {
+      "mode": "0644",
+      "path": "nxextract/nxextract-runtime-env.sh",
+      "role": "nxextract-runtime-env",
+      "sha256": "332919a9960d4317563b647f9932d1a4367da147a425fe2f78eafd706f01563f"
+    },
+    {
+      "mode": "0755",
+      "path": "nxextract/nxextract-ui",
+      "role": "nxextract-ui",
+      "sha256": "8e4a68ae0a611096d23b04628b4f2e8b5cf34755fe9b71d134bc0d7ea6ccf987"
+    },
+    {
+      "mode": "0755",
+      "path": "nxsplash-nextos",
+      "role": "nxsplash",
+      "sha256": "d85d896a906a778c9af250e5617d45d085a98b18552cb0254addbbc626036c97"
+    }
+  ],
+  "home_mode": "port",
+  "id": "riptidegp1",
+  "launcher_name": "Riptide GP1.sh",
+  "nxextract": {
+    "mode": "yes",
+    "version": "1.3.0"
+  },
+  "prepare_script": "",
+  "private_library_paths": [
+    "lib"
+  ],
+  "required_capabilities": [
+    "host.portmaster",
+    "graphics.window",
+    "graphics.gles2",
+    "graphics.egl",
+    "graphics.egl-config",
+    "graphics.drawable",
+    "audio.output-open",
+    "input.controller-mapping",
+    "input.controller-api"
+  ],
+  "required_files": [
+    "riptidegp1-nextos",
+    "nxsplash-nextos",
+    "lib/libSDL3.so.0",
+    "port-env.sh",
+    "gamedata/lib/arm64-v8a/libmain.so",
+    "gamedata/assets/Base.apf"
+  ],
+  "runtime_report": "log",
+  "schema_version": 3,
+  "title": "Riptide GP1"
+}

@@ -1,0 +1,7 @@
+# NEXTOS_SETTINGS/1
+# Riptide GP1 — ajustes do dono / owner settings
+# Edite os valores; chaves desconhecidas sao REJEITADAS (fail-closed).
+# language: auto ou uma tag como pt-BR, en, es.
+# quality: low neste port (ultra-low único para 512MB e 1GB).
+language=auto
+quality=low

@@ -1,0 +1,173 @@
+{
+  "schema": 1,
+  "id": "riptidegp1",
+  "version": "1",
+  "title": "RIPTIDE GP1",
+  "abi_order": [
+    "arm64-v8a"
+  ],
+  "input": {
+    "search_dirs": [
+      "gamedata",
+      "."
+    ],
+    "prefer_first_nonempty": true,
+    "sniff_all_in_primary": true,
+    "packages": [
+      "com.vectorunit.blue.archive"
+    ]
+  },
+  "extract": [
+    {
+      "id": "engine",
+      "source": {
+        "kind": "entry",
+        "patterns": [
+          "lib/{abi}/libmain.so"
+        ]
+      },
+      "destination": "gamedata/lib/arm64-v8a/libmain.so",
+      "validate": {
+        "type": "file",
+        "min_size": 7000000,
+        "elf_machine": "{abi}"
+      }
+    },
+    {
+      "id": "fmod",
+      "source": {
+        "kind": "entry",
+        "patterns": [
+          "lib/{abi}/libfmod.so"
+        ]
+      },
+      "destination": "gamedata/lib/arm64-v8a/libfmod.so",
+      "validate": {
+        "type": "file",
+        "min_size": 800000,
+        "elf_machine": "{abi}"
+      }
+    },
+    {
+      "id": "fmodstudio",
+      "source": {
+        "kind": "entry",
+        "patterns": [
+          "lib/{abi}/libfmodstudio.so"
+        ]
+      },
+      "destination": "gamedata/lib/arm64-v8a/libfmodstudio.so",
+      "validate": {
+        "type": "file",
+        "min_size": 600000,
+        "elf_machine": "{abi}"
+      }
+    },
+    {
+      "id": "libcxx",
+      "source": {
+        "kind": "entry",
+        "patterns": [
+          "lib/{abi}/libc++_shared.so"
+        ]
+      },
+      "destination": "gamedata/lib/arm64-v8a/libc++_shared.so",
+      "validate": {
+        "type": "file",
+        "min_size": 500000,
+        "elf_machine": "{abi}"
+      },
+      "required": false
+    },
+    {
+      "id": "base",
+      "source": {
+        "kind": "entry",
+        "patterns": [
+          "assets/Base.apf"
+        ]
+      },
+      "destination": "gamedata/assets/Base.apf",
+      "validate": {
+        "type": "file",
+        "min_size": 20000000,
+        "magic_ascii": "FPUV"
+      }
+    }
+  ],
+  "validate": [
+    {
+      "path": "gamedata/lib/arm64-v8a/libmain.so",
+      "type": "file",
+      "min_size": 7000000,
+      "elf_machine": "arm64-v8a"
+    },
+    {
+      "path": "gamedata/lib/arm64-v8a/libfmod.so",
+      "type": "file",
+      "min_size": 800000,
+      "elf_machine": "arm64-v8a"
+    },
+    {
+      "path": "gamedata/lib/arm64-v8a/libfmodstudio.so",
+      "type": "file",
+      "min_size": 600000,
+      "elf_machine": "arm64-v8a"
+    },
+    {
+      "path": "gamedata/assets/Base.apf",
+      "type": "file",
+      "min_size": 20000000,
+      "magic_ascii": "FPUV"
+    }
+  ],
+  "commit": [
+    "gamedata"
+  ],
+  "mutable": [
+    "gamedata/save",
+    "gamedata/local",
+    "gamedata/profile",
+    "gamedata/profileback"
+  ],
+  "marker": ".nxextract-riptidegp1.json",
+  "space": {
+    "safety_bytes": 268435456
+  },
+  "log": "nxextract.log",
+  "ui_success_seconds": 1,
+  "ui_error_seconds": 5,
+  "compatibility": {
+    "package_families": [
+      "com.vectorunit.blue.archive"
+    ],
+    "abis": [
+      "arm64-v8a"
+    ],
+    "required_members": [
+      {
+        "member": "lib/arm64-v8a/libmain.so",
+        "role": "variant_required",
+        "variant": "arm64-v8a"
+      },
+      {
+        "member": "lib/arm64-v8a/libfmod.so",
+        "role": "variant_required",
+        "variant": "arm64-v8a"
+      },
+      {
+        "member": "lib/arm64-v8a/libfmodstudio.so",
+        "role": "variant_required",
+        "variant": "arm64-v8a"
+      },
+      {
+        "member": "lib/arm64-v8a/libc++_shared.so",
+        "role": "optional"
+      },
+      {
+        "member": "assets/Base.apf",
+        "role": "core_required"
+      }
+    ]
+  }
+}

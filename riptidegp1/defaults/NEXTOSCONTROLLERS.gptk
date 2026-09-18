@@ -1,0 +1,21 @@
+# NEXTOSCONTROLLERS — controles do NextOS / NextOS controls
+# Riptide GP1: suporte nativo a gamepad, SEM mouse/cursor.
+# O stick direito fica 100% nativo e livre para manobras/stunts.
+# Formato próprio do NextOS. NÃO é gptokeyb: nunca vira teclado.
+#
+# IMPORTANTE: o loader só aceita as actions nativas abaixo (allowlist
+# interna: A = south/nitro/confirma, B = east/volta). Edite apenas trocando
+# A<->B entre si; qualquer outro valor é rejeitado (NXI1001) e o jogo aborta.
+# Sticks, D-pad, gatilhos, R3 e START são sempre nativos (fora deste arquivo).
+# Este arquivo é SEU: atualizações do port nunca sobrescrevem a sua cópia.
+
+format = NEXTOS_CONTROLLERS/1
+port = riptidegp1
+
+[menu]
+A = bb.confirm_powerup
+B = bb.back
+
+[gameplay]
+A = bb.confirm_powerup
+B = bb.back

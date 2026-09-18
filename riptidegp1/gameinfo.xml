@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<gameList>
+  <game>
+    <path>./Riptide GP1.sh</path>
+    <name>Riptide GP</name>
+    <desc>Riptide GP (Vector Unit, first of the series) running natively on aarch64 Linux handhelds via a Linux so-loader: original ARM64 engine on SDL3 + FMOD. Tested on R36S with DarkOS EN and DarkOS RE.</desc>
+    <developer>Vector Unit</developer>
+    <publisher>Vector Unit</publisher>
+    <genre>Racing</genre>
+    <image>./riptidegp1/cover.png</image>
+  </game>
+</gameList>
