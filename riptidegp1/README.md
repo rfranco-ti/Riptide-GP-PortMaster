@@ -1,6 +1,6 @@
 # Riptide GP — PortMaster port for R36S
 
-[![Riptide GP](cover.png)](https://vectorunit.itch.io/riptide-gp)
+<p align="center"><a href="https://vectorunit.itch.io/riptide-gp"><img src="cover.png" alt="Riptide GP" width="640"/></a></p>
 
 ## English
 
